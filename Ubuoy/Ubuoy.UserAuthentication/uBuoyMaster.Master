@@ -1,0 +1,253 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="uBuoyMaster.master.cs" Inherits="Ubuoy.UserAuthentication.uBuoyMaster" %>
+
+
+<%@ Register Src="~/UsersControl/avtar.ascx" TagPrefix="uc1" TagName="avtar" %>
+<%@ Register Src="~/UsersControl/settings.ascx" TagPrefix="uc1" TagName="settings" %>
+<%@ Register Src="~/UsersControl/account.ascx" TagPrefix="uc1" TagName="account" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta charset="utf-8">
+    <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="Ubuoy">
+    <meta name="author" content="Ubuoy Team">
+    <meta name="keywords" content="ubuoy">
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+
+    <link href="UI/css/modern.css" rel="stylesheet">
+    <!-- <link href="css/theme-dark.css" rel="stylesheet">-->
+    <link href="UI/css/modern-responsive.css" rel="stylesheet">
+
+    <script src="UI/public/js/assets/jquery-1.8.2.min.js"></script>
+    <script src="UI/public/js/assets/google-analytics.js"></script>
+    <script src="UI/public/js/assets/jquery.mousewheel.min.js"></script>
+    <script src="UI/public/js/assets/github.info.js"></script>
+    <script src="UI/public/js/modern/tile-slider.js"></script>
+    <script src="UI/public/js/modern/start-menu.js"></script>
+    <script src="UI/public/js/modern/tile-drag.js"></script>
+
+    <link rel='shortcut icon' type='image/x-icon' href='UI/images/favicon.ico' />
+    <title></title>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            $("#setting-charms").hide();
+            $("#account-charms").hide();
+            $(".show_Menu").show();
+            $(".app-bar").hide();
+            $(".show_app_bar").show();
+            $(".closeCharm").show();
+            $(".closeAccCharm").show();
+            $(".settingMenu").hide();
+            $(".settingMenuDiv").hide();
+
+            $('.show_Menu').hover(function () {
+                $(".settingMenu").show();
+            });
+
+            $('.settingMenu').hover(function () {
+                $(".settingMenuDiv").show();
+            });
+            $('.show_app_bar').hover(function () {
+                $(".app-bar").show();
+            });
+
+            $('.settingMenu').mouseleave(function () {
+                $(".settingMenu").hide();
+            });
+
+
+            $('.closeCharm').click(function () {
+                $("#setting-charms").hide();
+            });
+            $('.closeAccCharm').click(function () {
+                $("#account-charms").hide();
+            });
+
+            $('.showSettings').click(function () {
+                $("#setting-charms").show();
+                $(".settingMenu").hide();
+            });
+            $('.showAccount').click(function () {
+                $("#account-charms").show();
+                $(".settingMenu").hide();
+            });
+
+            $('.metrouicss').contextmenu(function () {
+                $(".app-bar").show();
+                return false;
+            });
+
+            $('.metrouicss').click(function () {
+                $(".app-bar").hide();
+                return false;
+            });
+
+            $('.app-bar').mouseleave(function () {
+                $(".app-bar").hide();
+            });
+
+        });
+
+
+
+    </script>
+
+    <style>
+        body {
+            background-image: url("UI/images/bg.png");
+            background-repeat: repeat;
+        }
+
+        .show_hide {
+            display: none;
+        }
+
+        #searchToolbarlink:hover, #aboutToolbarlink:hover, #accountToolbarlink:hover, #settingToolbarlink:hover, #ubuoyToolbarLink:hover, #addSkillLink:hover, #addTaskLink:hover, #EditUserLink:hover {
+            background-color: #353535;
+        }
+
+        #searchToolbarlink, #aboutToolbarlink, #accountToolbarlink, #settingToolbarlink, #ubuoyToolbarLink, #addSkillLink, #addTaskLink, #EditUserLink {
+            background-color: #1D1D1D;
+        }
+    </style>
+
+</head>
+<body class="metrouicss">
+    <div style="position:absolute; bottom:10px; left:10px;">
+        CSS Framework <a href="http://metroui.org.ua">Metro UI CSS</a>
+    </div>
+    <form id="form2" runat="server">
+
+        <!--Setting charm user control-->
+        <uc1:settings runat="server" ID="settings" />
+        <!--Account charm user control-->
+        <uc1:account runat="server" ID="account" />
+
+        <a href="#" class="show_app_bar" style="width: 100%; height: 20px; position: fixed; bottom: 0px; right: 0px; z-index: 1000;"></a>
+        <div class="app-bar fg-color-white bg-color-darken" style="border-top: 2px solid lightGrey; z-index: 1000;">
+            <div class="toolbar" style="float: right; margin-top: 5px; margin-right: 20px;">
+                <a onclick="window.location='Forms.aspx?formId=AddTask';" id="addTaskLink" class="fg-color-white" style="width: 80px; height: 80px;" runat="server">
+                    <i class="icon-plus" style="line-height: 40px; font-size: 40px;"></i>
+                    <br />
+                    <span class="label" style="line-height: 30px; font-size: 14px; font-weight: 400;">Add a Task</span>
+                </a>
+                <a ID="addSkillLink" runat="server" onclick="window.location='Forms.aspx?formId=AddSkill';" class="fg-color-white" style="width: 80px; height: 80px;" >
+                    <i class="icon-plus" style="line-height: 40px; font-size: 40px;"></i>
+                    <br />
+                    <span class="label" style="line-height: 30px; font-size: 14px; font-weight: 400;">Add a Skill</span>
+
+                </a>
+
+                <a onclick="window.location='Forms.aspx?formId=EditUserInfo';" id="EditUserLink" class="fg-color-white" style="width: 80px; height: 80px;">
+                    <i class="icon-user" style="line-height: 40px; font-size: 40px;"></i>
+                    <br />
+                    <span class="label" style="line-height: 30px; font-size: 14px; font-weight: 400;">Edit Account</span>
+                </a>
+            </div>
+        </div>
+
+
+        <div class="page secondary fixed-header">
+            <a href="#" class="show_Menu" style="width: 30px; height: 30px; position: fixed; top: 0px; right: 0px; z-index: 1000;"></a>
+            <a href="#" class="show_Menu" style="width: 30px; height: 30px; position: fixed; bottom: 0px; right: 0px; z-index: 1000;"></a>
+            <div class="settingMenu bg-color-darken" style="border-left: 2px solid lightGrey; width: 83px; height: 100%; position: fixed; top: 0px; right: 0px; z-index: 10000;">
+                <div class="settingMenuDiv bg-color-darken" style="width: 81px; height: 400px; margin-top: -200px; position: fixed; bottom: 50%; top: 50%; right: 0px; z-index: 100000;">
+                    <div class="toolbar-vertical">
+                        <a href="#" id="searchToolbarlink" class="fg-color-white" style="width: 80px; height: 80px;">
+                            <i class=" icon-search" style="line-height: 40px; font-size: 40px;"></i>
+                            <br />
+                            <span class="label" style="line-height: 30px; font-size: 14px; font-weight: 400;">Search</span>
+                        </a>
+
+                        <a href="#" id="accountToolbarlink" class="showAccount fg-color-white" style="width: 80px; height: 80px;">
+                            <i class="icon-user" style="line-height: 40px; font-size: 40px;"></i>
+                            <span class="label" style="line-height: 30px; font-size: 14px; font-weight: 400;">Account</span>
+                        </a>
+
+                        <a onclick="window.location='uBuoyIndex.aspx';" id="ubuoyToolbarLink" class="fg-color-white" style="width: 80px; height: 80px;">
+                            <span style="line-height: 80px; width: 83px;">
+                                <asp:Image ID="Image2" runat="server" Width="60" Height="60" ImageUrl="~/UI/images/icon-ubuoy2.png"></asp:Image>
+                            </span>
+                        </a>
+
+                        <a href="#" id="aboutToolbarlink" class="fg-color-white" style="width: 80px; height: 80px;">
+                            <i class="icon-info-2" style="line-height: 40px; font-size: 40px;"></i>
+                            <br />
+                            <span class="label" style="line-height: 30px; font-size: 14px; font-weight: 400;">About</span>
+                        </a>
+
+                        <a href="#" id="settingToolbarlink" class="showSettings fg-color-white" style="width: 80px; height: 80px;">
+                            <i class="icon-cog" style="line-height: 40px; font-size: 40px;"></i>
+                            <span class="label" style="line-height: 30px; font-size: 14px; font-weight: 400;">Setting</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page-header ">
+                <div class="page-header-content">
+                    <uc1:avtar runat="server" ID="avtar" />
+
+                    <%--<div class="user-login" style="width: 250px; height: 62px; position: relative;">
+                        <a href="#" class="">
+                            <div class="name" style="position: absolute; top: 0px; right: 70px;">
+                                <asp:Label CssClass="first-name-charms" ID="lbl_FirstName" runat="server" Text="Label"></asp:Label>
+                                <asp:Label CssClass="last-name-charms" ID="lbl_LastName" runat="server" Text="Label"></asp:Label>
+                            </div>
+                            <div class="avatar" style="position: absolute; top: 0px; right: 0px;">
+                                <asp:Image ID="imgProfile" runat="server" />
+                            </div>
+                        </a>
+
+                    </div>--%>
+
+                    <h1 class="fg-color-black">
+                        <img src="UI/images/ubuoy.png">
+                    </h1>
+                    <br />
+                    <br />
+
+
+                    <div class="input-control text" style="width: 400px; float: left; margin-left: 350px;" defaultbutton="search" runat="server">
+                        <input placeholder="Enter search phrase..." id="tbx_search" type="text" runat="server">
+                        <button class="btn-search" id="search" onserverclick="Search_Event" runat="server"></button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="page-region">
+                <asp:ContentPlaceHolder ID="PageRegionContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <a href='http://hit.ua/?x=19154' target='_blank'>
+            <script language="javascript" type="text/javascript"><!--
+    Cd = document; Cr = "&" + Math.random(); Cp = "&s=1";
+    Cd.cookie = "b=b"; if (Cd.cookie) Cp += "&c=1";
+    Cp += "&t=" + (new Date()).getTimezoneOffset();
+    if (self != top) Cp += "&f=1";
+    //--></script>
+            <script language="javascript1.1" type="text/javascript"><!--
+    if (navigator.javaEnabled()) Cp += "&j=1";
+    //--></script>
+            <script language="javascript1.2" type="text/javascript"><!--
+    if (typeof (screen) != 'undefined') Cp += "&w=" + screen.width + "&h=" +
+            screen.height + "&d=" + (screen.colorDepth ? screen.colorDepth : screen.pixelDepth);
+    //--></script>
+            <script language="javascript" type="text/javascript"><!--
+    Cd.write("<img src='http://c.hit.ua/hit?i=19154&g=0&x=2" + Cp + Cr +
+            "&r=" + escape(Cd.referrer) + "&u=" + escape(window.location.href) +
+            "' border='0' wi" + "dth='1' he" + "ight='1'/>");
+    //--></script>
+            <noscript>
+                <img src='http://c.hit.ua/hit?i=19154&amp;g=0&amp;x=2' border='0' />
+            </noscript>
+        </a>
+        <!-- / hit.ua -->
+    </form>
+</body>
+</html>

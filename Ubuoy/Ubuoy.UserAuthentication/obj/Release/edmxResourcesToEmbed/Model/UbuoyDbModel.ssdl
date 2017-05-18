@@ -1,0 +1,598 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Ubuoy_DB_ModelModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="Ubuoy_DB_ModelModelStoreContainer">
+    <EntitySet Name="Address" EntityType="Ubuoy_DB_ModelModel.Store.Address" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Application" EntityType="Ubuoy_DB_ModelModel.Store.Application" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Availibility" EntityType="Ubuoy_DB_ModelModel.Store.Availibility" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Category" EntityType="Ubuoy_DB_ModelModel.Store.Category" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Following" EntityType="Ubuoy_DB_ModelModel.Store.Following" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Honors" EntityType="Ubuoy_DB_ModelModel.Store.Honors" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ImagePackage" EntityType="Ubuoy_DB_ModelModel.Store.ImagePackage" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Module" EntityType="Ubuoy_DB_ModelModel.Store.Module" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="NewsFeed" EntityType="Ubuoy_DB_ModelModel.Store.NewsFeed" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Orginization" EntityType="Ubuoy_DB_ModelModel.Store.Orginization" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Project" EntityType="Ubuoy_DB_ModelModel.Store.Project" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Role" EntityType="Ubuoy_DB_ModelModel.Store.Role" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Skill" EntityType="Ubuoy_DB_ModelModel.Store.Skill" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Task" EntityType="Ubuoy_DB_ModelModel.Store.Task" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="User_With_honor" EntityType="Ubuoy_DB_ModelModel.Store.User_With_honor" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserModules" EntityType="Ubuoy_DB_ModelModel.Store.UserModules" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserProjects" EntityType="Ubuoy_DB_ModelModel.Store.UserProjects" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Users" EntityType="Ubuoy_DB_ModelModel.Store.Users" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UsersTasks" EntityType="Ubuoy_DB_ModelModel.Store.UsersTasks" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Application_Task" Association="Ubuoy_DB_ModelModel.Store.FK_Application_Task">
+      <End Role="Task" EntitySet="Task" />
+      <End Role="Application" EntitySet="Application" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Application_Users" Association="Ubuoy_DB_ModelModel.Store.FK_Application_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Application" EntitySet="Application" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Availibility_Skill" Association="Ubuoy_DB_ModelModel.Store.FK_Availibility_Skill">
+      <End Role="Skill" EntitySet="Skill" />
+      <End Role="Availibility" EntitySet="Availibility" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Availibility_Users" Association="Ubuoy_DB_ModelModel.Store.FK_Availibility_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Availibility" EntitySet="Availibility" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Following_Orginization" Association="Ubuoy_DB_ModelModel.Store.FK_Following_Orginization">
+      <End Role="Orginization" EntitySet="Orginization" />
+      <End Role="Following" EntitySet="Following" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Following_Project" Association="Ubuoy_DB_ModelModel.Store.FK_Following_Project">
+      <End Role="Project" EntitySet="Project" />
+      <End Role="Following" EntitySet="Following" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Following_Users" Association="Ubuoy_DB_ModelModel.Store.FK_Following_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Following" EntitySet="Following" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NewsFeed_Following" Association="Ubuoy_DB_ModelModel.Store.FK_NewsFeed_Following">
+      <End Role="Following" EntitySet="Following" />
+      <End Role="NewsFeed" EntitySet="NewsFeed" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NewsFeed_Orginization" Association="Ubuoy_DB_ModelModel.Store.FK_NewsFeed_Orginization">
+      <End Role="Orginization" EntitySet="Orginization" />
+      <End Role="NewsFeed" EntitySet="NewsFeed" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NewsFeed_Project" Association="Ubuoy_DB_ModelModel.Store.FK_NewsFeed_Project">
+      <End Role="Project" EntitySet="Project" />
+      <End Role="NewsFeed" EntitySet="NewsFeed" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Project_ImagePackage" Association="Ubuoy_DB_ModelModel.Store.FK_Project_ImagePackage">
+      <End Role="ImagePackage" EntitySet="ImagePackage" />
+      <End Role="Project" EntitySet="Project" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Project_Orginization" Association="Ubuoy_DB_ModelModel.Store.FK_Project_Orginization">
+      <End Role="Orginization" EntitySet="Orginization" />
+      <End Role="Project" EntitySet="Project" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Role_Users" Association="Ubuoy_DB_ModelModel.Store.FK_Role_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Role" EntitySet="Role" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Skill_Category" Association="Ubuoy_DB_ModelModel.Store.FK_Skill_Category">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="Skill" EntitySet="Skill" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Task_Category" Association="Ubuoy_DB_ModelModel.Store.FK_Task_Category">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="Task" EntitySet="Task" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Task_Skill" Association="Ubuoy_DB_ModelModel.Store.FK_Task_Skill">
+      <End Role="Skill" EntitySet="Skill" />
+      <End Role="Task" EntitySet="Task" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_With_honor_Honors" Association="Ubuoy_DB_ModelModel.Store.FK_User_With_honor_Honors">
+      <End Role="Honors" EntitySet="Honors" />
+      <End Role="User_With_honor" EntitySet="User_With_honor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_With_honor_Users" Association="Ubuoy_DB_ModelModel.Store.FK_User_With_honor_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="User_With_honor" EntitySet="User_With_honor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserModules_Module" Association="Ubuoy_DB_ModelModel.Store.FK_UserModules_Module">
+      <End Role="Module" EntitySet="Module" />
+      <End Role="UserModules" EntitySet="UserModules" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserModules_User" Association="Ubuoy_DB_ModelModel.Store.FK_UserModules_User">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="UserModules" EntitySet="UserModules" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserProjects_Project" Association="Ubuoy_DB_ModelModel.Store.FK_UserProjects_Project">
+      <End Role="Project" EntitySet="Project" />
+      <End Role="UserProjects" EntitySet="UserProjects" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserProjects_User" Association="Ubuoy_DB_ModelModel.Store.FK_UserProjects_User">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="UserProjects" EntitySet="UserProjects" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Address">
+    <Key>
+      <PropertyRef Name="addressId" />
+    </Key>
+    <Property Name="addressId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="country" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="city" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="postalCode" Type="int" Nullable="false" />
+    <Property Name="streetAddress" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="phone" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="email" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Application">
+    <Key>
+      <PropertyRef Name="applicationId" />
+    </Key>
+    <Property Name="applicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="userId" Type="uniqueidentifier" />
+    <Property Name="taskId" Type="uniqueidentifier" />
+    <Property Name="euro/Hr" Type="varchar" MaxLength="50" />
+    <Property Name="projectId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="Availibility">
+    <Key>
+      <PropertyRef Name="availibilityId" />
+    </Key>
+    <Property Name="availibilityId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="userId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="skillId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="from" Type="datetime" Nullable="false" />
+    <Property Name="to" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="categoryId" />
+    </Key>
+    <Property Name="categoryId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="image" Type="varchar(max)" />
+    <Property Name="parent" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Following">
+    <Key>
+      <PropertyRef Name="followingId" />
+    </Key>
+    <Property Name="followingId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="organizationId" Type="uniqueidentifier" />
+    <Property Name="projectId" Type="uniqueidentifier" />
+    <Property Name="userId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Honors">
+    <Key>
+      <PropertyRef Name="honorId" />
+    </Key>
+    <Property Name="honorId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="image" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="ImagePackage">
+    <Key>
+      <PropertyRef Name="imageId" />
+    </Key>
+    <Property Name="imageId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="imageDefault" Type="varchar(max)" />
+    <Property Name="image1" Type="nvarchar(max)" />
+    <Property Name="image2" Type="nvarchar(max)" />
+    <Property Name="image3" Type="nvarchar(max)" />
+    <Property Name="image4" Type="nvarchar(max)" />
+    <Property Name="image5" Type="nvarchar(max)" />
+    <Property Name="image6" Type="nvarchar(max)" />
+    <Property Name="image7" Type="nvarchar(max)" />
+    <Property Name="image8" Type="nvarchar(max)" />
+    <Property Name="image9" Type="nvarchar(max)" />
+    <Property Name="image10" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Module">
+    <Key>
+      <PropertyRef Name="moduleId" />
+    </Key>
+    <Property Name="moduleId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="name" Type="varchar(max)" />
+    <Property Name="icon" Type="varchar(max)" />
+    <Property Name="description" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="NewsFeed">
+    <Key>
+      <PropertyRef Name="newsFeedId" />
+    </Key>
+    <Property Name="newsFeedId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="organizationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="projectId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="date" Type="datetime" Nullable="false" />
+    <Property Name="feed" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="followingId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Orginization">
+    <Key>
+      <PropertyRef Name="orginizationId" />
+    </Key>
+    <Property Name="orginizationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="name" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="link" Type="nvarchar(max)" />
+    <Property Name="imagePackageId" Type="uniqueidentifier" />
+    <Property Name="orgLogo" Type="varchar(max)" />
+    <Property Name="orgFgColor" Type="nvarchar" MaxLength="50" />
+    <Property Name="orgBgColor" Type="nvarchar" MaxLength="50" />
+    <Property Name="country" Type="nvarchar(max)" />
+    <Property Name="city" Type="nvarchar(max)" />
+    <Property Name="postalCode" Type="int" />
+    <Property Name="streetAdress" Type="nvarchar(max)" />
+    <Property Name="email" Type="nvarchar(max)" />
+    <Property Name="phone" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Project">
+    <Key>
+      <PropertyRef Name="projectId" />
+    </Key>
+    <Property Name="projectId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="organizationId" Type="uniqueidentifier" />
+    <Property Name="description" Type="nvarchar(max)" />
+    <Property Name="startedOn" Type="datetime" />
+    <Property Name="endOn" Type="datetime" />
+    <Property Name="budget" Type="decimal" Precision="38" />
+    <Property Name="recived" Type="decimal" Precision="38" />
+    <Property Name="userId" Type="uniqueidentifier" />
+    <Property Name="imagePackageId" Type="uniqueidentifier" />
+    <Property Name="updateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="roleId" />
+    </Key>
+    <Property Name="roleId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="userId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Skill">
+    <Key>
+      <PropertyRef Name="skillId" />
+    </Key>
+    <Property Name="skillId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="skillName" Type="nvarchar" MaxLength="50" />
+    <Property Name="description" Type="nvarchar(max)" />
+    <Property Name="categoryId" Type="uniqueidentifier" />
+    <Property Name="userId" Type="uniqueidentifier" />
+    <Property Name="image" Type="nvarchar(max)" />
+    <Property Name="updateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Task">
+    <Key>
+      <PropertyRef Name="taskId" />
+    </Key>
+    <Property Name="taskId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="owner" Type="nvarchar" MaxLength="50" />
+    <Property Name="doer" Type="nvarchar" MaxLength="50" />
+    <Property Name="startedOn" Type="datetime" />
+    <Property Name="endline" Type="nvarchar(max)" />
+    <Property Name="deadline" Type="datetime" />
+    <Property Name="description" Type="nvarchar(max)" />
+    <Property Name="categoryId" Type="uniqueidentifier" />
+    <Property Name="status" Type="nvarchar(max)" />
+    <Property Name="skillId" Type="uniqueidentifier" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="money" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="User_With_honor">
+    <Key>
+      <PropertyRef Name="userWithHonorId" />
+    </Key>
+    <Property Name="userWithHonorId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="userId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="honorId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserModules">
+    <Key>
+      <PropertyRef Name="userModuleId" />
+    </Key>
+    <Property Name="userModuleId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="userId" Type="uniqueidentifier" />
+    <Property Name="prority" Type="bit" />
+    <Property Name="moduleFgColor" Type="nvarchar" MaxLength="50" />
+    <Property Name="moduleBgColor" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="UserProjects">
+    <Key>
+      <PropertyRef Name="userProjectId" />
+    </Key>
+    <Property Name="projectId" Type="uniqueidentifier" />
+    <Property Name="userId" Type="uniqueidentifier" />
+    <Property Name="priority" Type="bit" />
+    <Property Name="userProjectId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="userId" />
+    </Key>
+    <Property Name="userId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="firstName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="lastName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="email" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="gender" Type="nvarchar" MaxLength="50" />
+    <Property Name="DOB" Type="date" />
+    <Property Name="password" Type="nvarchar(max)" />
+    <Property Name="phoneNumber" Type="nvarchar(max)" />
+    <Property Name="image" Type="nvarchar(max)" />
+    <Property Name="country" Type="nvarchar(max)" />
+    <Property Name="city" Type="nvarchar(max)" />
+    <Property Name="postalCode" Type="int" />
+    <Property Name="streetAddress" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="UsersTasks">
+    <Key>
+      <PropertyRef Name="userTaskId" />
+    </Key>
+    <Property Name="userTaskId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="userId" Type="uniqueidentifier" />
+    <Property Name="taskId" Type="uniqueidentifier" />
+  </EntityType>
+  <Association Name="FK_Application_Task">
+    <End Role="Task" Type="Ubuoy_DB_ModelModel.Store.Task" Multiplicity="0..1" />
+    <End Role="Application" Type="Ubuoy_DB_ModelModel.Store.Application" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Task">
+        <PropertyRef Name="taskId" />
+      </Principal>
+      <Dependent Role="Application">
+        <PropertyRef Name="taskId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Application_Users">
+    <End Role="Users" Type="Ubuoy_DB_ModelModel.Store.Users" Multiplicity="0..1" />
+    <End Role="Application" Type="Ubuoy_DB_ModelModel.Store.Application" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="userId" />
+      </Principal>
+      <Dependent Role="Application">
+        <PropertyRef Name="userId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Availibility_Skill">
+    <End Role="Skill" Type="Ubuoy_DB_ModelModel.Store.Skill" Multiplicity="1" />
+    <End Role="Availibility" Type="Ubuoy_DB_ModelModel.Store.Availibility" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Skill">
+        <PropertyRef Name="skillId" />
+      </Principal>
+      <Dependent Role="Availibility">
+        <PropertyRef Name="skillId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Availibility_Users">
+    <End Role="Users" Type="Ubuoy_DB_ModelModel.Store.Users" Multiplicity="1" />
+    <End Role="Availibility" Type="Ubuoy_DB_ModelModel.Store.Availibility" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="userId" />
+      </Principal>
+      <Dependent Role="Availibility">
+        <PropertyRef Name="userId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Following_Orginization">
+    <End Role="Orginization" Type="Ubuoy_DB_ModelModel.Store.Orginization" Multiplicity="0..1" />
+    <End Role="Following" Type="Ubuoy_DB_ModelModel.Store.Following" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Orginization">
+        <PropertyRef Name="orginizationId" />
+      </Principal>
+      <Dependent Role="Following">
+        <PropertyRef Name="organizationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Following_Project">
+    <End Role="Project" Type="Ubuoy_DB_ModelModel.Store.Project" Multiplicity="0..1" />
+    <End Role="Following" Type="Ubuoy_DB_ModelModel.Store.Following" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Project">
+        <PropertyRef Name="projectId" />
+      </Principal>
+      <Dependent Role="Following">
+        <PropertyRef Name="projectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Following_Users">
+    <End Role="Users" Type="Ubuoy_DB_ModelModel.Store.Users" Multiplicity="1" />
+    <End Role="Following" Type="Ubuoy_DB_ModelModel.Store.Following" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="userId" />
+      </Principal>
+      <Dependent Role="Following">
+        <PropertyRef Name="userId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NewsFeed_Following">
+    <End Role="Following" Type="Ubuoy_DB_ModelModel.Store.Following" Multiplicity="1" />
+    <End Role="NewsFeed" Type="Ubuoy_DB_ModelModel.Store.NewsFeed" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Following">
+        <PropertyRef Name="followingId" />
+      </Principal>
+      <Dependent Role="NewsFeed">
+        <PropertyRef Name="followingId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NewsFeed_Orginization">
+    <End Role="Orginization" Type="Ubuoy_DB_ModelModel.Store.Orginization" Multiplicity="1" />
+    <End Role="NewsFeed" Type="Ubuoy_DB_ModelModel.Store.NewsFeed" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Orginization">
+        <PropertyRef Name="orginizationId" />
+      </Principal>
+      <Dependent Role="NewsFeed">
+        <PropertyRef Name="organizationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NewsFeed_Project">
+    <End Role="Project" Type="Ubuoy_DB_ModelModel.Store.Project" Multiplicity="1" />
+    <End Role="NewsFeed" Type="Ubuoy_DB_ModelModel.Store.NewsFeed" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Project">
+        <PropertyRef Name="projectId" />
+      </Principal>
+      <Dependent Role="NewsFeed">
+        <PropertyRef Name="projectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Project_ImagePackage">
+    <End Role="ImagePackage" Type="Ubuoy_DB_ModelModel.Store.ImagePackage" Multiplicity="0..1" />
+    <End Role="Project" Type="Ubuoy_DB_ModelModel.Store.Project" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ImagePackage">
+        <PropertyRef Name="imageId" />
+      </Principal>
+      <Dependent Role="Project">
+        <PropertyRef Name="imagePackageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Project_Orginization">
+    <End Role="Orginization" Type="Ubuoy_DB_ModelModel.Store.Orginization" Multiplicity="0..1" />
+    <End Role="Project" Type="Ubuoy_DB_ModelModel.Store.Project" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Orginization">
+        <PropertyRef Name="orginizationId" />
+      </Principal>
+      <Dependent Role="Project">
+        <PropertyRef Name="organizationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Role_Users">
+    <End Role="Users" Type="Ubuoy_DB_ModelModel.Store.Users" Multiplicity="1" />
+    <End Role="Role" Type="Ubuoy_DB_ModelModel.Store.Role" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="userId" />
+      </Principal>
+      <Dependent Role="Role">
+        <PropertyRef Name="userId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Skill_Category">
+    <End Role="Category" Type="Ubuoy_DB_ModelModel.Store.Category" Multiplicity="0..1" />
+    <End Role="Skill" Type="Ubuoy_DB_ModelModel.Store.Skill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="categoryId" />
+      </Principal>
+      <Dependent Role="Skill">
+        <PropertyRef Name="categoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Task_Category">
+    <End Role="Category" Type="Ubuoy_DB_ModelModel.Store.Category" Multiplicity="0..1" />
+    <End Role="Task" Type="Ubuoy_DB_ModelModel.Store.Task" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="categoryId" />
+      </Principal>
+      <Dependent Role="Task">
+        <PropertyRef Name="categoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Task_Skill">
+    <End Role="Skill" Type="Ubuoy_DB_ModelModel.Store.Skill" Multiplicity="0..1" />
+    <End Role="Task" Type="Ubuoy_DB_ModelModel.Store.Task" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Skill">
+        <PropertyRef Name="skillId" />
+      </Principal>
+      <Dependent Role="Task">
+        <PropertyRef Name="skillId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_With_honor_Honors">
+    <End Role="Honors" Type="Ubuoy_DB_ModelModel.Store.Honors" Multiplicity="1" />
+    <End Role="User_With_honor" Type="Ubuoy_DB_ModelModel.Store.User_With_honor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Honors">
+        <PropertyRef Name="honorId" />
+      </Principal>
+      <Dependent Role="User_With_honor">
+        <PropertyRef Name="honorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_With_honor_Users">
+    <End Role="Users" Type="Ubuoy_DB_ModelModel.Store.Users" Multiplicity="1" />
+    <End Role="User_With_honor" Type="Ubuoy_DB_ModelModel.Store.User_With_honor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="userId" />
+      </Principal>
+      <Dependent Role="User_With_honor">
+        <PropertyRef Name="userId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserModules_Module">
+    <End Role="Module" Type="Ubuoy_DB_ModelModel.Store.Module" Multiplicity="1" />
+    <End Role="UserModules" Type="Ubuoy_DB_ModelModel.Store.UserModules" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Module">
+        <PropertyRef Name="moduleId" />
+      </Principal>
+      <Dependent Role="UserModules">
+        <PropertyRef Name="userModuleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserModules_User">
+    <End Role="Users" Type="Ubuoy_DB_ModelModel.Store.Users" Multiplicity="0..1" />
+    <End Role="UserModules" Type="Ubuoy_DB_ModelModel.Store.UserModules" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="userId" />
+      </Principal>
+      <Dependent Role="UserModules">
+        <PropertyRef Name="userId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserProjects_Project">
+    <End Role="Project" Type="Ubuoy_DB_ModelModel.Store.Project" Multiplicity="0..1" />
+    <End Role="UserProjects" Type="Ubuoy_DB_ModelModel.Store.UserProjects" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Project">
+        <PropertyRef Name="projectId" />
+      </Principal>
+      <Dependent Role="UserProjects">
+        <PropertyRef Name="projectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserProjects_User">
+    <End Role="Users" Type="Ubuoy_DB_ModelModel.Store.Users" Multiplicity="0..1" />
+    <End Role="UserProjects" Type="Ubuoy_DB_ModelModel.Store.UserProjects" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="userId" />
+      </Principal>
+      <Dependent Role="UserProjects">
+        <PropertyRef Name="userId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

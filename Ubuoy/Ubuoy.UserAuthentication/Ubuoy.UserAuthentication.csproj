@@ -1,0 +1,1043 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1B0FF717-5507-4237-81DC-B7A7F7D78B33}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ubuoy.UserAuthentication</RootNamespace>
+    <AssemblyName>Ubuoy.UserAuthentication</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.Edm, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Edm.5.6.4\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Data.OData.5.0.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Data.Services.5.0.0\lib\net40\Microsoft.Data.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services.Client, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Data.Services.Client.5.0.0\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Spatial, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\System.Spatial.5.0.0\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\Ubuoy_DB_Model.mdf" />
+    <Content Include="App_Data\Ubuoy_DB_Model_log.ldf">
+      <DependentUpon>Ubuoy_DB_Model.mdf</DependentUpon>
+    </Content>
+    <Content Include="content\css\bootmetro-charms.css" />
+    <Content Include="content\css\bootmetro-tiles.css" />
+    <Content Include="content\css\bootmetro.css" />
+    <Content Include="content\css\bootstrap-responsive.css" />
+    <Content Include="content\css\bootstrap.css" />
+    <Content Include="content\css\datepicker.css" />
+    <Content Include="content\css\demo-old.css" />
+    <Content Include="content\css\demo.css" />
+    <Content Include="content\css\icomoon.css" />
+    <Content Include="content\css\ie.css" />
+    <Content Include="content\css\jcontent.css" />
+    <Content Include="content\css\metro-ui-dark.css" />
+    <Content Include="content\css\metro-ui-light.css" />
+    <Content Include="content\css\metro-ui-ubuoy.css" />
+    <Content Include="content\css\print.css" />
+    <Content Include="content\css\sIFR-screen.css" />
+    <Content Include="content\css\style.css" />
+    <Content Include="content\css\style1024.css" />
+    <Content Include="content\css\style800.css" />
+    <Content Include="content\font\IcoMoon.svg" />
+    <Content Include="content\font\icomoon97172\IcoMoon.svg" />
+    <Content Include="content\font\icomoon97172\index.html" />
+    <Content Include="content\font\icomoon97172\license.txt" />
+    <Content Include="content\font\icomoon97172\style.css" />
+    <Content Include="content\font\LICENSE.txt" />
+    <Content Include="content\font\opensans-bold-webfont.svg" />
+    <Content Include="content\font\opensans-light-webfont.svg" />
+    <Content Include="content\font\opensans-regular-webfont.svg" />
+    <Content Include="content\font\opensans-semibold-webfont.svg" />
+    <Content Include="content\ico\apple-touch-icon-114-precomposed.png" />
+    <Content Include="content\ico\apple-touch-icon-144-precomposed.png" />
+    <Content Include="content\ico\apple-touch-icon-57-precomposed.png" />
+    <Content Include="content\ico\apple-touch-icon-72-precomposed.png" />
+    <Content Include="content\ico\favicon.ico" />
+    <Content Include="content\img\appbar.png" />
+    <Content Include="content\img\avatar-movie-puzzles-2.jpg" />
+    <Content Include="content\img\bootstrap-mdo-sfmoma-01.jpg" />
+    <Content Include="content\img\bootstrap-mdo-sfmoma-02.jpg" />
+    <Content Include="content\img\bootstrap-mdo-sfmoma-03.jpg" />
+    <Content Include="content\img\bs-docs-masthead-pattern.png" />
+    <Content Include="content\img\bs-docs-responsive-illustrations.png" />
+    <Content Include="content\img\bs-docs-twitter-github.png" />
+    <Content Include="content\img\Coding app.png" />
+    <Content Include="content\img\detail-appbar-1.png" />
+    <Content Include="content\img\detail-appbar-2.png" />
+    <Content Include="content\img\detail-charms.png" />
+    <Content Include="content\img\detail-headermenu.png" />
+    <Content Include="content\img\detail-hub.png" />
+    <Content Include="content\img\detail-icons.png" />
+    <Content Include="content\img\detail-themes.png" />
+    <Content Include="content\img\Devices.png" />
+    <Content Include="content\img\examples\bootstrap-example-carousel.png" />
+    <Content Include="content\img\examples\bootstrap-example-fluid.jpg" />
+    <Content Include="content\img\examples\bootstrap-example-hero.jpg" />
+    <Content Include="content\img\examples\bootstrap-example-marketing-narrow.png" />
+    <Content Include="content\img\examples\bootstrap-example-signin.png" />
+    <Content Include="content\img\examples\bootstrap-example-starter.jpg" />
+    <Content Include="content\img\examples\bootstrap-example-sticky-footer.png" />
+    <Content Include="content\img\examples\browser-icon-chrome.png" />
+    <Content Include="content\img\examples\browser-icon-firefox.png" />
+    <Content Include="content\img\examples\browser-icon-safari.png" />
+    <Content Include="content\img\examples\slide-01.jpg" />
+    <Content Include="content\img\examples\slide-02.jpg" />
+    <Content Include="content\img\examples\slide-03.jpg" />
+    <Content Include="content\img\github-icons.png" />
+    <Content Include="content\img\github.gif" />
+    <Content Include="content\img\glyphicons-halflings-white.png" />
+    <Content Include="content\img\glyphicons-halflings.png" />
+    <Content Include="content\img\grid-baseline-20px.png" />
+    <Content Include="content\img\h2.png" />
+    <Content Include="content\img\hero-small.png" />
+    <Content Include="content\img\hero.png" />
+    <Content Include="content\img\hero2.png" />
+    <Content Include="content\img\hero3-black.png" />
+    <Content Include="content\img\hero3.png" />
+    <Content Include="content\img\hero4.png" />
+    <Content Include="content\img\less-css-logo.png" />
+    <Content Include="content\img\less-logo-large.png" />
+    <Content Include="content\img\metro-tiles-wide.jpg" />
+    <Content Include="content\img\metro-tiles-widepeek.png" />
+    <Content Include="content\img\metro-tiles.jpg" />
+    <Content Include="content\img\My Apps.png" />
+    <Content Include="content\img\Octocat-96x96.png" />
+    <Content Include="content\img\octocat.png" />
+    <Content Include="content\img\progress-indeterminate-dark.gif" />
+    <Content Include="content\img\progress-indeterminate-light.gif" />
+    <Content Include="content\img\progress-indeterminate-ring-dark-small.gif" />
+    <Content Include="content\img\progress-indeterminate-ring-dark.gif" />
+    <Content Include="content\img\progress-indeterminate-ring-light-small.gif" />
+    <Content Include="content\img\progress-indeterminate-ring-light.gif" />
+    <Content Include="content\img\RegEdit.png" />
+    <Content Include="content\img\sample1.png" />
+    <Content Include="content\img\sample2.png" />
+    <Content Include="content\img\sample3.png" />
+    <Content Include="content\img\sample4.png" />
+    <Content Include="content\img\sample5.png" />
+    <Content Include="content\img\slide1.png" />
+    <Content Include="content\img\slider2.png" />
+    <Content Include="content\img\tile-wide-collection-1.jpg" />
+    <Content Include="content\img\tile-wide-collection-2.png" />
+    <Content Include="content\img\tile-wide-collection-3.gif" />
+    <Content Include="content\img\tile-wide-collection-4.png" />
+    <Content Include="content\img\tile-wide.jpg" />
+    <Content Include="content\img\tile.png" />
+    <Content Include="content\img\Windows 8.png" />
+    <Content Include="content\img\Windows alt.png" />
+    <Content Include="content\img\Windows Store.png" />
+    <Content Include="content\img\windows-8-fish.jpg" />
+    <Content Include="content\img\Windows.png" />
+    <Content Include="content\img\windows_8_logo.png" />
+    <Content Include="css\demo.css" />
+    <Content Include="css\ie.css" />
+    <Content Include="css\jcontent.css" />
+    <Content Include="css\jquery-1.7.2.min.js" />
+    <Content Include="css\jquery-ui-1.8.19.custom.css" />
+    <Content Include="css\jquery-ui-1.8.19.custom.min.js" />
+    <Content Include="css\print.css" />
+    <Content Include="css\sIFR-screen.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\style1024.css" />
+    <Content Include="css\style800.css" />
+    <Content Include="DataLayer\Ubuoy_DB_Model.mdf" />
+    <Content Include="Demo.aspx" />
+    <Content Include="examples\carousel.html" />
+    <Content Include="examples\fluid.html" />
+    <Content Include="examples\hero.html" />
+    <Content Include="examples\marketing-alternate.html" />
+    <Content Include="examples\marketing-narrow.html" />
+    <Content Include="examples\signin.html" />
+    <Content Include="examples\starter-template.html" />
+    <Content Include="examples\sticky-footer.html" />
+    <Content Include="Forms.aspx" />
+    <Content Include="images\bg.png" />
+    <Content Include="images\dots.png" />
+    <Content Include="images\ubuoy.png" />
+    <Content Include="img\ajax-loader.gif" />
+    <Content Include="img\arrows\bdown.png" />
+    <Content Include="img\arrows\bleft.png" />
+    <Content Include="img\arrows\bright.png" />
+    <Content Include="img\arrows\bup.png" />
+    <Content Include="img\arrows\wdown.png" />
+    <Content Include="img\arrows\wleft.png" />
+    <Content Include="img\arrows\wright.png" />
+    <Content Include="img\arrows\wup.png" />
+    <Content Include="img\slides\slid15.jpg" />
+    <Content Include="img\slides\slide1.jpg" />
+    <Content Include="img\slides\slide10.jpg" />
+    <Content Include="img\slides\slide11.jpg" />
+    <Content Include="img\slides\slide12.jpg" />
+    <Content Include="img\slides\slide13.jpg" />
+    <Content Include="img\slides\slide14.jpg" />
+    <Content Include="img\slides\slide15.jpg" />
+    <Content Include="img\slides\slide16.jpg" />
+    <Content Include="img\slides\slide17.jpg" />
+    <Content Include="img\slides\slide18.jpg" />
+    <Content Include="img\slides\slide19.jpg" />
+    <Content Include="img\slides\slide2.jpg" />
+    <Content Include="img\slides\slide20.jpg" />
+    <Content Include="img\slides\slide21.jpg" />
+    <Content Include="img\slides\slide22.jpg" />
+    <Content Include="img\slides\slide23.jpg" />
+    <Content Include="img\slides\slide3.jpg" />
+    <Content Include="img\slides\slide4.jpg" />
+    <Content Include="img\slides\slide5.jpg" />
+    <Content Include="img\slides\slide6.jpg" />
+    <Content Include="img\slides\slide7.jpg" />
+    <Content Include="img\slides\slide8.jpg" />
+    <Content Include="img\slides\slide9.jpg" />
+    <Content Include="Model\UbuoyDbModel.edmx.sql" />
+    <Content Include="OrganizationProfile.aspx" />
+    <Content Include="Organizations.aspx" />
+    <Content Include="Profile.aspx" />
+    <Content Include="Search.aspx" />
+    <Content Include="skillsCategory.aspx" />
+    <Content Include="tasksCategory.aspx" />
+    <Content Include="UbuoyIndex.aspx" />
+    <Content Include="ubuoyNews.aspx" />
+    <Content Include="ubuoyOrganizationDetail.aspx" />
+    <Content Include="ubuoyOrganizations.aspx" />
+    <Content Include="js\control.js" />
+    <Content Include="js\easing.js" />
+    <Content Include="js\hts-thw.js" />
+    <Content Include="js\jcontent.js" />
+    <Content Include="js\jcontent.min.js" />
+    <Content Include="js\jquery-1.5.2.min.js" />
+    <Content Include="js\sifr.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="Model\MobileUbuoyDataServices.svc" />
+    <Content Include="Model\WcfDataService1.svc" />
+    <Content Include="scripts\bootmetro-charms.js" />
+    <Content Include="scripts\bootmetro.js" />
+    <Content Include="scripts\bootstrap-datepicker.js" />
+    <Content Include="scripts\bootstrap.js" />
+    <Content Include="scripts\bootstrap.min.js" />
+    <Content Include="scripts\demo.js" />
+    <Content Include="scripts\google-code-prettify\prettify.css" />
+    <Content Include="scripts\google-code-prettify\prettify.js" />
+    <Content Include="scripts\holder.js" />
+    <Content Include="scripts\jquery-1.7.2.js" />
+    <Content Include="scripts\jquery-1.7.2.min.js" />
+    <Content Include="scripts\jquery-1.8.2.js" />
+    <Content Include="scripts\jquery-1.8.2.min.js" />
+    <Content Include="scripts\jquery.blockUI.js" />
+    <Content Include="scripts\jquery.form.js" />
+    <Content Include="scripts\jquery.mousewheel.js" />
+    <Content Include="scripts\jquery.scrollTo.js" />
+    <Content Include="scripts\jquery.validate.js" />
+    <Content Include="scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="scripts\modernizr-2.6.1.min.js" />
+    <Content Include="scripts\mustache.js" />
+    <Content Include="TestPages\Test.aspx" />
+    <Content Include="uBuoyProjectDetails.aspx" />
+    <Content Include="uBuoyProjects.aspx" />
+    <Content Include="uBuoySkillDetail.aspx" />
+    <Content Include="uBuoySkills.aspx" />
+    <Content Include="uBuoyTaskDetails.aspx" />
+    <Content Include="uBuoyTasks.aspx" />
+    <Content Include="UI\css\modern-responsive.css" />
+    <Content Include="UI\css\modern.css" />
+    <Content Include="UI\css\theme-dark.css" />
+    <Content Include="UI\fonts\iconFont.svg" />
+    <Content Include="UI\fonts\license.txt" />
+    <Content Include="UI\images\1.jpg" />
+    <Content Include="UI\images\1005-BizSpark-261x230.jpg" />
+    <Content Include="UI\images\2.jpg" />
+    <Content Include="UI\images\3.jpg" />
+    <Content Include="UI\images\4.jpg" />
+    <Content Include="UI\images\5.jpg" />
+    <Content Include="UI\images\62x62.png" />
+    <Content Include="UI\images\armor.png" />
+    <Content Include="UI\images\author.jpg" />
+    <Content Include="UI\images\bage-activity.png" />
+    <Content Include="UI\images\bage-alert.png" />
+    <Content Include="UI\images\bage-attention.png" />
+    <Content Include="UI\images\bage-available.png" />
+    <Content Include="UI\images\bage-away.png" />
+    <Content Include="UI\images\bage-busy.png" />
+    <Content Include="UI\images\bage-error.png" />
+    <Content Include="UI\images\bage-newMessage.png" />
+    <Content Include="UI\images\bage-paused.png" />
+    <Content Include="UI\images\bage-playing.png" />
+    <Content Include="UI\images\bage-unavailable.png" />
+    <Content Include="UI\images\banner_lomakoti_940x322px2.jpg" />
+    <Content Include="UI\images\bg.png" />
+    <Content Include="UI\images\Calendar128.png" />
+    <Content Include="UI\images\Camera48.png" />
+    <Content Include="UI\images\chrome.png" />
+    <Content Include="UI\images\collapse24-black.png" />
+    <Content Include="UI\images\collapse24.png" />
+    <Content Include="UI\images\collapse32-black.png" />
+    <Content Include="UI\images\collapse32.png" />
+    <Content Include="UI\images\domestic.jpg" />
+    <Content Include="UI\images\dots.png" />
+    <Content Include="UI\images\download-32.png" />
+    <Content Include="UI\images\excel2013icon.png" />
+    <Content Include="UI\images\expand24-black.png" />
+    <Content Include="UI\images\expand24.png" />
+    <Content Include="UI\images\expand32-black.png" />
+    <Content Include="UI\images\expand32.png" />
+    <Content Include="UI\images\firefox.png" />
+    <Content Include="UI\images\fork-32.png" />
+    <Content Include="UI\images\github.png" />
+    <Content Include="UI\images\goal.png" />
+    <Content Include="UI\images\goal\1.jpg" />
+    <Content Include="UI\images\goal\2.jpg" />
+    <Content Include="UI\images\goal\3.png" />
+    <Content Include="UI\images\grid.png" />
+    <Content Include="UI\images\haiti_2.jpg" />
+    <Content Include="UI\images\icon-ubuoy.png" />
+    <Content Include="UI\images\icon-ubuoy2.png" />
+    <Content Include="UI\images\icons-white.png" />
+    <Content Include="UI\images\icons.png" />
+    <Content Include="UI\images\ie.png" />
+    <Content Include="UI\images\InternetExplorer128.png" />
+    <Content Include="UI\images\items.png" />
+    <Content Include="UI\images\kara_1.jpg" />
+    <Content Include="UI\images\lasten.png" />
+    <Content Include="UI\images\lasten\keskusliitto_300.jpg" />
+    <Content Include="UI\images\lasten\kouluttaa_300.jpg" />
+    <Content Include="UI\images\lasten\tiedottaa_300.jpg" />
+    <Content Include="UI\images\lasten\vaikuttaa_300.jpg" />
+    <Content Include="UI\images\lasten\yhteystiedot_300.jpg" />
+    <Content Include="UI\images\lock-open.png" />
+    <Content Include="UI\images\lock.png" />
+    <Content Include="UI\images\logo-jetbrains.jpg" />
+    <Content Include="UI\images\logo32.png" />
+    <Content Include="UI\images\Mail128.png" />
+    <Content Include="UI\images\Market128.png" />
+    <Content Include="UI\images\me.jpg" />
+    <Content Include="UI\images\michael.jpg" />
+    <Content Include="UI\images\modules\23a52d95-a597-4c12-ada3-b24df8683f39.png" />
+    <Content Include="UI\images\modules\5eb07e59-4878-4625-9b54-5be99557abe4.png" />
+    <Content Include="UI\images\modules\958394c5-9976-435a-972d-e7abb6852ecc.png" />
+    <Content Include="UI\images\modules\5a787d06-8ca6-4127-860e-ae4af8fe0a06.png" />
+    <Content Include="UI\images\modules\c06a9f08-3a32-47b7-ba01-78c80ef7681b.png" />
+    <Content Include="UI\images\modules\1e18f914-a9e6-41ff-875d-fcc95c6b9694.png" />
+    <Content Include="UI\images\modules\47a6bf65-460c-4bbf-95da-1dcdc83e743b.png" />
+    <Content Include="UI\images\modules\ec4465d3-c2a8-41c3-8746-367ac913d80b.png" />
+    <Content Include="UI\images\modules\4da29374-78c0-41a5-9059-4856c2f5f5a0.png" />
+    <Content Include="UI\images\modules\57a577d1-971c-4b3a-94c1-e2a84a4ad4d6.png" />
+    <Content Include="UI\images\modules\51a019fd-bffd-4e45-96b6-7737a2b6c7c8.png" />
+    <Content Include="UI\images\Music128.png" />
+    <Content Include="UI\images\myface.jpg" />
+    <Content Include="UI\images\onenote2013icon.png" />
+    <Content Include="UI\images\opera.png" />
+    <Content Include="UI\images\organizations\01219744-042e-4d1f-a44d-dccb517749d1\01219744-042e-4d1f-a44d-dccb517749d1.png" />
+    <Content Include="UI\images\organizations\01219744-042e-4d1f-a44d-dccb517749d1\projects\59216ab9-e47e-4b8b-bb48-ef229da544de\image1 .jpg" />
+    <Content Include="UI\images\organizations\01219744-042e-4d1f-a44d-dccb517749d1\projects\59216ab9-e47e-4b8b-bb48-ef229da544de\image2.jpg" />
+    <Content Include="UI\images\organizations\01219744-042e-4d1f-a44d-dccb517749d1\projects\59216ab9-e47e-4b8b-bb48-ef229da544de\image3.jpg" />
+    <Content Include="UI\images\organizations\01219744-042e-4d1f-a44d-dccb517749d1\projects\59216ab9-e47e-4b8b-bb48-ef229da544de\image4.jpg" />
+    <Content Include="UI\images\organizations\01219744-042e-4d1f-a44d-dccb517749d1\projects\59216ab9-e47e-4b8b-bb48-ef229da544de\image5.jpg" />
+    <Content Include="UI\images\organizations\01219744-042e-4d1f-a44d-dccb517749d1\projects\59216ab9-e47e-4b8b-bb48-ef229da544de\image6.jpg" />
+    <Content Include="UI\images\organizations\0ca27bef-3af0-475e-ade1-537b300fd3c2\0ca27bef-3af0-475e-ade1-537b300fd3c2.png" />
+    <Content Include="UI\images\organizations\0ca27bef-3af0-475e-ade1-537b300fd3c2\projects\9fad58ac-516c-4486-b471-322fe92a98b9\image1.jpg" />
+    <Content Include="UI\images\organizations\0ca27bef-3af0-475e-ade1-537b300fd3c2\projects\9fad58ac-516c-4486-b471-322fe92a98b9\image2.jpg" />
+    <Content Include="UI\images\organizations\0ca27bef-3af0-475e-ade1-537b300fd3c2\projects\9fad58ac-516c-4486-b471-322fe92a98b9\image3.jpg" />
+    <Content Include="UI\images\organizations\0ca27bef-3af0-475e-ade1-537b300fd3c2\projects\9fad58ac-516c-4486-b471-322fe92a98b9\image4.jpg" />
+    <Content Include="UI\images\organizations\0ca27bef-3af0-475e-ade1-537b300fd3c2\projects\9fad58ac-516c-4486-b471-322fe92a98b9\image5.jpg" />
+    <Content Include="UI\images\organizations\5d5104bd-938d-448c-8262-b2d7b7defeb4\5d5104bd-938d-448c-8262-b2d7b7defeb4.png" />
+    <Content Include="UI\images\organizations\5d5104bd-938d-448c-8262-b2d7b7defeb4\projects\23b37873-2f21-4093-a91a-d4b8e30f1c71\image1.jpg" />
+    <Content Include="UI\images\organizations\5d5104bd-938d-448c-8262-b2d7b7defeb4\projects\23b37873-2f21-4093-a91a-d4b8e30f1c71\image2.jpg" />
+    <Content Include="UI\images\organizations\79177e2c-b980-4040-bda6-2e525424231c\79177e2c-b980-4040-bda6-2e525424231c.png" />
+    <Content Include="UI\images\organizations\79177e2c-b980-4040-bda6-2e525424231c\projects\2dcb18a7-a231-45c2-aac2-a18dbe432090\image1.jpg" />
+    <Content Include="UI\images\organizations\79177e2c-b980-4040-bda6-2e525424231c\projects\2dcb18a7-a231-45c2-aac2-a18dbe432090\image2.jpg" />
+    <Content Include="UI\images\organizations\79177e2c-b980-4040-bda6-2e525424231c\projects\2dcb18a7-a231-45c2-aac2-a18dbe432090\image3.jpg" />
+    <Content Include="UI\images\organizations\79177e2c-b980-4040-bda6-2e525424231c\projects\2dcb18a7-a231-45c2-aac2-a18dbe432090\image4.jpg" />
+    <Content Include="UI\images\organizations\b3be8058-66fa-4199-8a82-5d438b713e7c\b3be8058-66fa-4199-8a82-5d438b713e7c.png" />
+    <Content Include="UI\images\organizations\b3be8058-66fa-4199-8a82-5d438b713e7c\projects\ac2c45f4-3331-4b81-8df6-0a04e2ed7676\image1.jpg" />
+    <Content Include="UI\images\organizations\b3be8058-66fa-4199-8a82-5d438b713e7c\projects\ac2c45f4-3331-4b81-8df6-0a04e2ed7676\image2.jpg" />
+    <Content Include="UI\images\organizations\b3be8058-66fa-4199-8a82-5d438b713e7c\projects\ac2c45f4-3331-4b81-8df6-0a04e2ed7676\image3.jpg" />
+    <Content Include="UI\images\organizations\b5e6d10d-43c0-4670-8215-35a0b216055b\b5e6d10d-43c0-4670-8215-35a0b216055b.png" />
+    <Content Include="UI\images\organizations\b5e6d10d-43c0-4670-8215-35a0b216055b\projects\c5384f36-748c-4086-9295-038937992120\image1.jpg" />
+    <Content Include="UI\images\organizations\b5e6d10d-43c0-4670-8215-35a0b216055b\projects\c5384f36-748c-4086-9295-038937992120\image10.jpg" />
+    <Content Include="UI\images\organizations\b5e6d10d-43c0-4670-8215-35a0b216055b\projects\c5384f36-748c-4086-9295-038937992120\image2.jpg" />
+    <Content Include="UI\images\organizations\b5e6d10d-43c0-4670-8215-35a0b216055b\projects\c5384f36-748c-4086-9295-038937992120\image3.jpg" />
+    <Content Include="UI\images\organizations\b5e6d10d-43c0-4670-8215-35a0b216055b\projects\c5384f36-748c-4086-9295-038937992120\image4.jpg" />
+    <Content Include="UI\images\organizations\b5e6d10d-43c0-4670-8215-35a0b216055b\projects\c5384f36-748c-4086-9295-038937992120\image5.jpg" />
+    <Content Include="UI\images\organizations\b5e6d10d-43c0-4670-8215-35a0b216055b\projects\c5384f36-748c-4086-9295-038937992120\image6.jpg" />
+    <Content Include="UI\images\organizations\b5e6d10d-43c0-4670-8215-35a0b216055b\projects\c5384f36-748c-4086-9295-038937992120\image7.jpg" />
+    <Content Include="UI\images\organizations\b5e6d10d-43c0-4670-8215-35a0b216055b\projects\c5384f36-748c-4086-9295-038937992120\image8.jpg" />
+    <Content Include="UI\images\organizations\b5e6d10d-43c0-4670-8215-35a0b216055b\projects\c5384f36-748c-4086-9295-038937992120\image9.jpg" />
+    <Content Include="UI\images\PelastakaaLapsetEnsin.png" />
+    <Content Include="UI\images\Picture128.png" />
+    <Content Include="UI\images\preloader-w8-cycle-black.gif" />
+    <Content Include="UI\images\preloader-w8-cycle-white.gif" />
+    <Content Include="UI\images\preloader-w8-line-black.gif" />
+    <Content Include="UI\images\preloader-w8-line-white.gif" />
+    <Content Include="UI\images\profile\d6e54eb2-76d7-4973-b121-f9f329f70c81.jpg" />
+    <Content Include="UI\images\profile\icon-ubuoy2.png" />
+    <Content Include="UI\images\pull24-dark.png" />
+    <Content Include="UI\images\pull24.png" />
+    <Content Include="UI\images\redCross.png" />
+    <Content Include="UI\images\responsive.png" />
+    <Content Include="UI\images\row24.png" />
+    <Content Include="UI\images\Rss128.png" />
+    <Content Include="UI\images\shield-user.png" />
+    <Content Include="UI\images\simple.png" />
+    <Content Include="UI\images\star32.png" />
+    <Content Include="UI\images\stock-up.png" />
+    <Content Include="UI\images\toivekauppa_banner.jpg" />
+    <Content Include="UI\images\toivekauppa_banner_en_940x322.jpg" />
+    <Content Include="UI\images\ubuoy.png" />
+    <Content Include="UI\images\unisef.png" />
+    <Content Include="UI\images\unisef1.jpg" />
+    <Content Include="UI\images\unisef2.jpg" />
+    <Content Include="UI\images\unisef3.jpg" />
+    <Content Include="UI\images\unisef4.jpg" />
+    <Content Include="UI\images\unisef5.jpg" />
+    <Content Include="UI\images\unisef6.jpg" />
+    <Content Include="UI\images\Video128.png" />
+    <Content Include="UI\images\view-32.png" />
+    <Content Include="UI\images\windows-8-metro.jpg" />
+    <Content Include="UI\images\windows8_metro_green_1920_1080.jpg" />
+    <Content Include="UI\images\word2013icon.png" />
+    <Content Include="UI\images\worldvision.jpg" />
+    <Content Include="UI\images\worldvision\1.jpg" />
+    <Content Include="UI\images\worldvision\10.jpg" />
+    <Content Include="UI\images\worldvision\2.jpg" />
+    <Content Include="UI\images\worldvision\3.jpg" />
+    <Content Include="UI\images\worldvision\4.jpg" />
+    <Content Include="UI\images\worldvision\5.jpg" />
+    <Content Include="UI\images\worldvision\6.jpg" />
+    <Content Include="UI\images\worldvision\7.jpg" />
+    <Content Include="UI\images\worldvision\8.jpg" />
+    <Content Include="UI\images\worldvision\9.jpg" />
+    <Content Include="UI\images\youth-emergency-shelters_0.jpg" />
+    <Content Include="UI\images\YouTube128.png" />
+    <Content Include="UI\javascript\accordion.js" />
+    <Content Include="UI\javascript\buttonset.js" />
+    <Content Include="UI\javascript\calendar.js" />
+    <Content Include="UI\javascript\carousel.js" />
+    <Content Include="UI\javascript\dialog.js" />
+    <Content Include="UI\javascript\dropdown.js" />
+    <Content Include="UI\javascript\input-control.js" />
+    <Content Include="UI\javascript\pagecontrol.js" />
+    <Content Include="UI\javascript\rating.js" />
+    <Content Include="UI\javascript\slider.js" />
+    <Content Include="UI\javascript\start-menu.js" />
+    <Content Include="UI\javascript\tile-drag.js" />
+    <Content Include="UI\javascript\tile-slider.js" />
+    <Content Include="UI\public\css\modern-responsive.css" />
+    <Content Include="UI\public\css\modern.css" />
+    <Content Include="UI\public\css\site.css" />
+    <Content Include="UI\public\css\theme-dark.css" />
+    <Content Include="UI\public\fonts\iconFont.svg" />
+    <Content Include="UI\public\fonts\license.txt" />
+    <Content Include="UI\public\js\assets\github.info.js" />
+    <Content Include="UI\public\js\assets\google-analytics.js" />
+    <Content Include="UI\public\js\assets\jquery-1.8.2.min.js" />
+    <Content Include="UI\public\js\assets\jquery-1.9.0.min.js" />
+    <Content Include="UI\public\js\assets\jquery.mousewheel.min.js" />
+    <Content Include="UI\public\js\assets\moment.js" />
+    <Content Include="UI\public\js\assets\moment_langs.js" />
+    <Content Include="UI\public\js\google-code-prettify\lang-apollo.js" />
+    <Content Include="UI\public\js\google-code-prettify\lang-clj.js" />
+    <Content Include="UI\public\js\google-code-prettify\lang-css.js" />
+    <Content Include="UI\public\js\google-code-prettify\lang-go.js" />
+    <Content Include="UI\public\js\google-code-prettify\lang-hs.js" />
+    <Content Include="UI\public\js\google-code-prettify\lang-lisp.js" />
+    <Content Include="UI\public\js\google-code-prettify\lang-lua.js" />
+    <Content Include="UI\public\js\google-code-prettify\lang-ml.js" />
+    <Content Include="UI\public\js\google-code-prettify\lang-n.js" />
+    <Content Include="UI\public\js\google-code-prettify\lang-proto.js" />
+    <Content Include="UI\public\js\google-code-prettify\lang-scala.js" />
+    <Content Include="UI\public\js\google-code-prettify\lang-sql.js" />
+    <Content Include="UI\public\js\google-code-prettify\lang-tex.js" />
+    <Content Include="UI\public\js\google-code-prettify\lang-vb.js" />
+    <Content Include="UI\public\js\google-code-prettify\lang-vhdl.js" />
+    <Content Include="UI\public\js\google-code-prettify\lang-wiki.js" />
+    <Content Include="UI\public\js\google-code-prettify\lang-xq.js" />
+    <Content Include="UI\public\js\google-code-prettify\lang-yaml.js" />
+    <Content Include="UI\public\js\google-code-prettify\prettify.css" />
+    <Content Include="UI\public\js\google-code-prettify\prettify.js" />
+    <Content Include="UI\public\js\modern\accordion.js" />
+    <Content Include="UI\public\js\modern\buttonset.js" />
+    <Content Include="UI\public\js\modern\calendar.js" />
+    <Content Include="UI\public\js\modern\carousel.js" />
+    <Content Include="UI\public\js\modern\dialog.js" />
+    <Content Include="UI\public\js\modern\dropdown.js" />
+    <Content Include="UI\public\js\modern\input-control.js" />
+    <Content Include="UI\public\js\modern\pagecontrol.js" />
+    <Content Include="UI\public\js\modern\rating.js" />
+    <Content Include="UI\public\js\modern\slider.js" />
+    <Content Include="UI\public\js\modern\start-menu.js" />
+    <Content Include="UI\public\js\modern\tile-drag.js" />
+    <Content Include="UI\public\js\modern\tile-slider.js" />
+    <Content Include="UI\public\js\sharrre\jquery.sharrre-1.3.4.min.js" />
+    <Content Include="UserRegistration.aspx" />
+    <Content Include="UsersControl\about.ascx" />
+    <Content Include="UsersControl\addOrganization.ascx" />
+    <Content Include="UsersControl\addProject.ascx" />
+    <Content Include="UsersControl\Address.ascx" />
+    <Content Include="UsersControl\addSkill.ascx" />
+    <Content Include="UsersControl\addTask.ascx" />
+    <Content Include="UsersControl\appBar.ascx" />
+    <Content Include="UsersControl\applyForTask.ascx" />
+    <Content Include="UsersControl\avtar.ascx" />
+    <Content Include="UsersControl\editUserInfo.ascx" />
+    <Content Include="UsersControl\followOrganizationOrProjectOrUser.ascx" />
+    <Content Include="UsersControl\followProject.ascx" />
+    <Content Include="UsersControl\settings.ascx" />
+    <Content Include="UsersControl\account.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessLayer\AddressBusinessObjects.cs" />
+    <Compile Include="BusinessLayer\ApplicationBusinessObjects.cs" />
+    <Compile Include="BusinessLayer\AvailibilityBusinessObject.cs" />
+    <Compile Include="BusinessLayer\CategoryBusinessObjects.cs" />
+    <Compile Include="BusinessLayer\FollowingBusinessObjects.cs" />
+    <Compile Include="BusinessLayer\HonorsBusinessObjects.cs" />
+    <Compile Include="BusinessLayer\ImagePackageBusinessObjects.cs" />
+    <Compile Include="BusinessLayer\Interfaces\IValidation.cs" />
+    <Compile Include="BusinessLayer\ModuleBusinessObjects.cs" />
+    <Compile Include="BusinessLayer\NewsFeedBussinessObjects.cs" />
+    <Compile Include="BusinessLayer\OrginizationBusinessObjects.cs" />
+    <Compile Include="BusinessLayer\ProjectBussinessObjects.cs" />
+    <Compile Include="BusinessLayer\RoleBusinessObjects.cs" />
+    <Compile Include="BusinessLayer\SkillBusinessObjects.cs" />
+    <Compile Include="BusinessLayer\TaskBusinessObjects.cs" />
+    <Compile Include="BusinessLayer\UbuoyAuthentication.cs" />
+    <Compile Include="BusinessLayer\UserBusinessObjects.cs" />
+    <Compile Include="BusinessLayer\UserModulesBusinessObjects.cs" />
+    <Compile Include="BusinessLayer\UserProjectBusinessObjects.cs" />
+    <Compile Include="BusinessLayer\UsersTaskBusinessObjects.cs" />
+    <Compile Include="BusinessLayer\UserWithHonorBussinessObjects.cs" />
+    <Compile Include="Demo.aspx.cs">
+      <DependentUpon>Demo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Demo.aspx.designer.cs">
+      <DependentUpon>Demo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dynamic_Ui_Creation\ModuleDynamicCreation.cs" />
+    <Compile Include="Dynamic_Ui_Creation\ProjectDynamicCreation.cs" />
+    <Compile Include="Forms.aspx.cs">
+      <DependentUpon>Forms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms.aspx.designer.cs">
+      <DependentUpon>Forms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMaster.Master.cs">
+      <DependentUpon>FormsMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsMaster.Master.designer.cs">
+      <DependentUpon>FormsMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\ConfigurationHelper.cs" />
+    <Compile Include="Helper\ValidationHelper.cs" />
+    <Compile Include="OrganizationProfile.aspx.cs">
+      <DependentUpon>OrganizationProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrganizationProfile.aspx.designer.cs">
+      <DependentUpon>OrganizationProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organizations.aspx.cs">
+      <DependentUpon>Organizations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organizations.aspx.designer.cs">
+      <DependentUpon>Organizations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="skillsCategory.aspx.cs">
+      <DependentUpon>skillsCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="skillsCategory.aspx.designer.cs">
+      <DependentUpon>skillsCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tasksCategory.aspx.cs">
+      <DependentUpon>tasksCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tasksCategory.aspx.designer.cs">
+      <DependentUpon>tasksCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UbuoyIndex.aspx.cs">
+      <DependentUpon>UbuoyIndex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UbuoyIndex.aspx.designer.cs">
+      <DependentUpon>UbuoyIndex.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="uBuoyMaster.Master.cs">
+      <DependentUpon>uBuoyMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uBuoyMaster.Master.designer.cs">
+      <DependentUpon>uBuoyMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="uBuoyMasterNA.Master.cs">
+      <DependentUpon>uBuoyMasterNA.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uBuoyMasterNA.Master.designer.cs">
+      <DependentUpon>uBuoyMasterNA.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ubuoyNews.aspx.cs">
+      <DependentUpon>ubuoyNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ubuoyNews.aspx.designer.cs">
+      <DependentUpon>ubuoyNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ubuoyOrganizationDetail.aspx.cs">
+      <DependentUpon>ubuoyOrganizationDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ubuoyOrganizationDetail.aspx.designer.cs">
+      <DependentUpon>ubuoyOrganizationDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ubuoyOrganizations.aspx.cs">
+      <DependentUpon>ubuoyOrganizations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ubuoyOrganizations.aspx.designer.cs">
+      <DependentUpon>ubuoyOrganizations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\GenericRepository.cs" />
+    <Compile Include="Model\IRepository.cs" />
+    <Compile Include="Model\MobileDataSource.cs" />
+    <Compile Include="Model\MobileUbuoyDataServices.svc.cs">
+      <DependentUpon>MobileUbuoyDataServices.svc</DependentUpon>
+    </Compile>
+    <Compile Include="DataLayer\UbuoyRepository.cs" />
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\UbuoyDbModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UbuoyDbModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\WcfDataService1.svc.cs">
+      <DependentUpon>WcfDataService1.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestPages\Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestPages\Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="uBuoyProjectDetails.aspx.cs">
+      <DependentUpon>uBuoyProjectDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uBuoyProjectDetails.aspx.designer.cs">
+      <DependentUpon>uBuoyProjectDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="uBuoyProjects.aspx.cs">
+      <DependentUpon>uBuoyProjects.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uBuoyProjects.aspx.designer.cs">
+      <DependentUpon>uBuoyProjects.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="uBuoySkillDetail.aspx.cs">
+      <DependentUpon>uBuoySkillDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uBuoySkillDetail.aspx.designer.cs">
+      <DependentUpon>uBuoySkillDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="uBuoySkills.aspx.cs">
+      <DependentUpon>uBuoySkills.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uBuoySkills.aspx.designer.cs">
+      <DependentUpon>uBuoySkills.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="uBuoyTaskDetails.aspx.cs">
+      <DependentUpon>uBuoyTaskDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uBuoyTaskDetails.aspx.designer.cs">
+      <DependentUpon>uBuoyTaskDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="uBuoyTasks.aspx.cs">
+      <DependentUpon>uBuoyTasks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uBuoyTasks.aspx.designer.cs">
+      <DependentUpon>uBuoyTasks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserRegistration.aspx.cs">
+      <DependentUpon>UserRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserRegistration.aspx.designer.cs">
+      <DependentUpon>UserRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsersControl\about.ascx.cs">
+      <DependentUpon>about.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsersControl\about.ascx.designer.cs">
+      <DependentUpon>about.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UsersControl\addOrganization.ascx.cs">
+      <DependentUpon>addOrganization.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsersControl\addOrganization.ascx.designer.cs">
+      <DependentUpon>addOrganization.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UsersControl\addProject.ascx.cs">
+      <DependentUpon>addProject.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsersControl\addProject.ascx.designer.cs">
+      <DependentUpon>addProject.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UsersControl\Address.ascx.cs">
+      <DependentUpon>Address.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsersControl\Address.ascx.designer.cs">
+      <DependentUpon>Address.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UsersControl\addSkill.ascx.cs">
+      <DependentUpon>addSkill.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsersControl\addSkill.ascx.designer.cs">
+      <DependentUpon>addSkill.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UsersControl\addTask.ascx.cs">
+      <DependentUpon>addTask.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsersControl\addTask.ascx.designer.cs">
+      <DependentUpon>addTask.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UsersControl\appBar.ascx.cs">
+      <DependentUpon>appBar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsersControl\appBar.ascx.designer.cs">
+      <DependentUpon>appBar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UsersControl\applyForTask.ascx.cs">
+      <DependentUpon>applyForTask.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsersControl\applyForTask.ascx.designer.cs">
+      <DependentUpon>applyForTask.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UsersControl\avtar.ascx.cs">
+      <DependentUpon>avtar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsersControl\avtar.ascx.designer.cs">
+      <DependentUpon>avtar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UsersControl\editUserInfo.ascx.cs">
+      <DependentUpon>editUserInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsersControl\editUserInfo.ascx.designer.cs">
+      <DependentUpon>editUserInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UsersControl\followOrganizationOrProjectOrUser.ascx.cs">
+      <DependentUpon>followOrganizationOrProjectOrUser.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsersControl\followOrganizationOrProjectOrUser.ascx.designer.cs">
+      <DependentUpon>followOrganizationOrProjectOrUser.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UsersControl\followProject.ascx.cs">
+      <DependentUpon>followProject.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsersControl\followProject.ascx.designer.cs">
+      <DependentUpon>followProject.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UsersControl\settings.ascx.cs">
+      <DependentUpon>settings.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsersControl\settings.ascx.designer.cs">
+      <DependentUpon>settings.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UsersControl\account.ascx.cs">
+      <DependentUpon>account.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsersControl\account.ascx.designer.cs">
+      <DependentUpon>account.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="content\css\LICENSE" />
+    <Content Include="content\font\IcoMoon.eot" />
+    <Content Include="content\font\IcoMoon.ttf" />
+    <Content Include="content\font\IcoMoon.woff" />
+    <Content Include="content\font\icomoon97172\IcoMoon.eot" />
+    <Content Include="content\font\icomoon97172\IcoMoon.ttf" />
+    <Content Include="content\font\icomoon97172\IcoMoon.woff" />
+    <Content Include="content\font\opensans-bold-webfont.eot" />
+    <Content Include="content\font\opensans-bold-webfont.ttf" />
+    <Content Include="content\font\opensans-bold-webfont.woff" />
+    <Content Include="content\font\opensans-light-webfont.eot" />
+    <Content Include="content\font\opensans-light-webfont.ttf" />
+    <Content Include="content\font\opensans-light-webfont.woff" />
+    <Content Include="content\font\opensans-regular-webfont.eot" />
+    <Content Include="content\font\opensans-regular-webfont.ttf" />
+    <Content Include="content\font\opensans-regular-webfont.woff" />
+    <Content Include="content\font\opensans-semibold-webfont.eot" />
+    <Content Include="content\font\opensans-semibold-webfont.ttf" />
+    <Content Include="content\font\opensans-semibold-webfont.woff" />
+    <Content Include="content\font\ubuoy.ttf" />
+    <Content Include="images\Thumbs.db" />
+    <Content Include="scripts\.gitignore" />
+    <Content Include="scripts\README.md" />
+    <Content Include="fonts\Windows8-Black.ttf" />
+    <Content Include="fonts\Windows8-Bold.ttf" />
+    <Content Include="fonts\Windows8-Light.ttf" />
+    <Content Include="fonts\Windows8-Semibold.ttf" />
+    <Content Include="fonts\Windows8-Semilight.ttf" />
+    <Content Include="fonts\windows8.ttf" />
+    <EntityDeploy Include="Model\UbuoyDbModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>UbuoyDbModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Model\UbuoyDbModel.edmx.diagram">
+      <DependentUpon>UbuoyDbModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="FormsMaster.Master" />
+    <None Include="Properties\PublishProfiles\ubouytesting - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\ubouytesting - Web Deploy.pubxml" />
+    <Content Include="UI\.gitignore" />
+    <Content Include="UI\fonts\iconFont.eot" />
+    <Content Include="UI\fonts\iconFont.ttf" />
+    <Content Include="UI\fonts\iconFont.woff" />
+    <Content Include="UI\less\accordion.less" />
+    <Content Include="UI\less\bricks.less" />
+    <Content Include="UI\less\buttons.less" />
+    <Content Include="UI\less\calendar.less" />
+    <Content Include="UI\less\cards.less" />
+    <Content Include="UI\less\carousel.less" />
+    <Content Include="UI\less\code.less" />
+    <Content Include="UI\less\colors.less" />
+    <Content Include="UI\less\dialog.less" />
+    <Content Include="UI\less\forms.less" />
+    <Content Include="UI\less\grid.less" />
+    <Content Include="UI\less\hero.less" />
+    <Content Include="UI\less\icons.less" />
+    <Content Include="UI\less\images.less" />
+    <Content Include="UI\less\layout.less" />
+    <Content Include="UI\less\listview.less" />
+    <Content Include="UI\less\menus.less" />
+    <Content Include="UI\less\modern-responsive-max480.less" />
+    <Content Include="UI\less\modern-responsive-max767.less" />
+    <Content Include="UI\less\modern-responsive-max979.less" />
+    <Content Include="UI\less\modern-responsive-min1200.less" />
+    <Content Include="UI\less\modern-responsive.less" />
+    <Content Include="UI\less\modern.less" />
+    <Content Include="UI\less\notices.less" />
+    <Content Include="UI\less\pagecontrol.less" />
+    <Content Include="UI\less\progress.less" />
+    <Content Include="UI\less\rating.less" />
+    <Content Include="UI\less\reset.less" />
+    <Content Include="UI\less\routines.less" />
+    <Content Include="UI\less\sidebar.less" />
+    <Content Include="UI\less\slider.less" />
+    <Content Include="UI\less\tables.less" />
+    <Content Include="UI\less\theme-dark.less" />
+    <Content Include="UI\less\tiles.less" />
+    <Content Include="UI\less\typography.less" />
+    <Content Include="UI\public\.htaccess" />
+    <Content Include="UI\public\accordion.php" />
+    <Content Include="UI\public\adsense.php" />
+    <Content Include="UI\public\buttons-set.php" />
+    <Content Include="UI\public\buttons.php" />
+    <Content Include="UI\public\calendar.php" />
+    <Content Include="UI\public\cards.php" />
+    <Content Include="UI\public\carousel.php" />
+    <Content Include="UI\public\counter.php" />
+    <Content Include="UI\public\dialog.php" />
+    <Content Include="UI\public\fonts\iconFont.eot" />
+    <Content Include="UI\public\fonts\iconFont.ttf" />
+    <Content Include="UI\public\fonts\iconFont.woff" />
+    <Content Include="UI\public\footer.php" />
+    <Content Include="UI\public\forms.php" />
+    <Content Include="UI\public\global.php" />
+    <Content Include="UI\public\grid.php" />
+    <Content Include="UI\public\header.php" />
+    <Content Include="UI\public\icons.php" />
+    <Content Include="UI\public\images.php" />
+    <Content Include="UI\public\index.php" />
+    <Content Include="UI\public\javascript.php" />
+    <Content Include="UI\public\js\sharrre\sharrre.php" />
+    <Content Include="UI\public\layout.php" />
+    <Content Include="UI\public\listview.php" />
+    <Content Include="UI\public\menus.php" />
+    <Content Include="UI\public\navigation.php" />
+    <Content Include="UI\public\notices.php" />
+    <Content Include="UI\public\page-secondary.php" />
+    <Content Include="UI\public\page.php" />
+    <Content Include="UI\public\pagecontrol.php" />
+    <Content Include="UI\public\progress.php" />
+    <Content Include="UI\public\rating.php" />
+    <Content Include="UI\public\responsive.php" />
+    <Content Include="UI\public\sidebar.php" />
+    <Content Include="UI\public\slider.php" />
+    <Content Include="UI\public\sponsoring.php" />
+    <Content Include="UI\public\tables.php" />
+    <Content Include="UI\public\tiles.php" />
+    <Content Include="UI\public\typography.php" />
+    <Content Include="UI\public\version.phtml" />
+    <Content Include="UI\public\windows8start.php" />
+    <Content Include="uBuoyMaster.Master" />
+    <Content Include="uBuoyMasterNA.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51900</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50343/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

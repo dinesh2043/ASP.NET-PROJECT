@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="28b945dfcb0547a2a5d76e2701d1c138" Name="Diagram1" ZoomLevel="92">
+        <EntityTypeShape EntityType="Ubuoy_DB_ModelModel.Address" Width="1.5" PointX="6.5498152945888295" PointY="7.7962388134543961" />
+        <EntityTypeShape EntityType="Ubuoy_DB_ModelModel.Application" Width="1.5" PointX="0.988526383875183" PointY="10.139032607031536" />
+        <EntityTypeShape EntityType="Ubuoy_DB_ModelModel.Availibility" Width="1.5" PointX="4.1334933229412387" PointY="29.138977466681496" />
+        <EntityTypeShape EntityType="Ubuoy_DB_ModelModel.Category" Width="1.5" PointX="6.087348491925443" PointY="29.589158846805411" />
+        <EntityTypeShape EntityType="Ubuoy_DB_ModelModel.Following" Width="1.5" PointX="7.4460994822187807" PointY="13.911063081543457" />
+        <EntityTypeShape EntityType="Ubuoy_DB_ModelModel.Honor" Width="1.5" PointX="9.7763858278172027" PointY="23.01384740649436" />
+        <EntityTypeShape EntityType="Ubuoy_DB_ModelModel.ImagePackage" Width="1.5" PointX="6.6890784030263672" PointY="24.219336163354729" />
+        <EntityTypeShape EntityType="Ubuoy_DB_ModelModel.Module" Width="1.5" PointX="6.63938004832686" PointY="23.792597081415632" />
+        <EntityTypeShape EntityType="Ubuoy_DB_ModelModel.NewsFeed" Width="1.5" PointX="10.880111183449678" PointY="15.861285872692841" />
+        <EntityTypeShape EntityType="Ubuoy_DB_ModelModel.Orginization" Width="1.5" PointX="4.9565411959572421" PointY="11.249743243330039" />
+        <EntityTypeShape EntityType="Ubuoy_DB_ModelModel.Project" Width="1.5" PointX="6.8732197465716016" PointY="8.9015817534651518" />
+        <EntityTypeShape EntityType="Ubuoy_DB_ModelModel.Role" Width="1.5" PointX="10.842565761340113" PointY="3.7510480302158036" />
+        <EntityTypeShape EntityType="Ubuoy_DB_ModelModel.Skill" Width="1.5" PointX="1.020528188450508" PointY="3.889977531456378" />
+        <EntityTypeShape EntityType="Ubuoy_DB_ModelModel.Task" Width="1.5" PointX="4.6454183052505451" PointY="31.369073852602892" />
+        <EntityTypeShape EntityType="Ubuoy_DB_ModelModel.User_With_honor" Width="1.5" PointX="5.1887546485237568" PointY="2.0306916693368424" />
+        <EntityTypeShape EntityType="Ubuoy_DB_ModelModel.UserModule" Width="1.5" PointX="3.552670225292756" PointY="28.168102799061735" />
+        <EntityTypeShape EntityType="Ubuoy_DB_ModelModel.UserProject" Width="1.5" PointX="1.5721165712792968" PointY="6.9357568802944183" />
+        <EntityTypeShape EntityType="Ubuoy_DB_ModelModel.User" Width="1.5" PointX="5.369405119386224" PointY="11.431737636882689" />
+        <EntityTypeShape EntityType="Ubuoy_DB_ModelModel.UsersTask" Width="1.5" PointX="10.139634327096694" PointY="9.6832690135032262" />
+        <AssociationConnector Association="Ubuoy_DB_ModelModel.FK_Application_Task" />
+        <AssociationConnector Association="Ubuoy_DB_ModelModel.FK_Application_Users" />
+        <AssociationConnector Association="Ubuoy_DB_ModelModel.FK_Availibility_Skill" />
+        <AssociationConnector Association="Ubuoy_DB_ModelModel.FK_Availibility_Users" />
+        <AssociationConnector Association="Ubuoy_DB_ModelModel.FK_Skill_Category" />
+        <AssociationConnector Association="Ubuoy_DB_ModelModel.FK_Task_Category" />
+        <AssociationConnector Association="Ubuoy_DB_ModelModel.FK_Following_Orginization" />
+        <AssociationConnector Association="Ubuoy_DB_ModelModel.FK_Following_Project" />
+        <AssociationConnector Association="Ubuoy_DB_ModelModel.FK_Following_Users" />
+        <AssociationConnector Association="Ubuoy_DB_ModelModel.FK_NewsFeed_Following" />
+        <AssociationConnector Association="Ubuoy_DB_ModelModel.FK_User_With_honor_Honors" />
+        <AssociationConnector Association="Ubuoy_DB_ModelModel.FK_Project_ImagePackage" />
+        <AssociationConnector Association="Ubuoy_DB_ModelModel.FK_UserModules_Module" />
+        <AssociationConnector Association="Ubuoy_DB_ModelModel.FK_NewsFeed_Orginization" />
+        <AssociationConnector Association="Ubuoy_DB_ModelModel.FK_NewsFeed_Project" />
+        <AssociationConnector Association="Ubuoy_DB_ModelModel.FK_Project_Orginization" />
+        <AssociationConnector Association="Ubuoy_DB_ModelModel.FK_UserProjects_Project" />
+        <AssociationConnector Association="Ubuoy_DB_ModelModel.FK_Role_Users" />
+        <AssociationConnector Association="Ubuoy_DB_ModelModel.FK_Task_Skill" />
+        <AssociationConnector Association="Ubuoy_DB_ModelModel.FK_User_With_honor_Users" />
+        <AssociationConnector Association="Ubuoy_DB_ModelModel.FK_UserModules_User" />
+        <AssociationConnector Association="Ubuoy_DB_ModelModel.FK_UserProjects_User" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

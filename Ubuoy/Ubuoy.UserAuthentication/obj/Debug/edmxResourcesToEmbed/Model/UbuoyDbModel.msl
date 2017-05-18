@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Ubuoy_DB_ModelModelStoreContainer" CdmEntityContainer="Ubuoy_DB_ModelEntities">
+    <EntitySetMapping Name="Addresses">
+      <EntityTypeMapping TypeName="Ubuoy_DB_ModelModel.Address">
+        <MappingFragment StoreEntitySet="Address">
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="streetAddress" ColumnName="streetAddress" />
+          <ScalarProperty Name="postalCode" ColumnName="postalCode" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="addressId" ColumnName="addressId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Applications">
+      <EntityTypeMapping TypeName="Ubuoy_DB_ModelModel.Application">
+        <MappingFragment StoreEntitySet="Application">
+          <ScalarProperty Name="projectId" ColumnName="projectId" />
+          <ScalarProperty Name="euro_Hr" ColumnName="euro/Hr" />
+          <ScalarProperty Name="taskId" ColumnName="taskId" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="applicationId" ColumnName="applicationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Availibilities">
+      <EntityTypeMapping TypeName="Ubuoy_DB_ModelModel.Availibility">
+        <MappingFragment StoreEntitySet="Availibility">
+          <ScalarProperty Name="to" ColumnName="to" />
+          <ScalarProperty Name="from" ColumnName="from" />
+          <ScalarProperty Name="skillId" ColumnName="skillId" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="availibilityId" ColumnName="availibilityId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="Ubuoy_DB_ModelModel.Category">
+        <MappingFragment StoreEntitySet="Category">
+          <ScalarProperty Name="parent" ColumnName="parent" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="categoryId" ColumnName="categoryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Followings">
+      <EntityTypeMapping TypeName="Ubuoy_DB_ModelModel.Following">
+        <MappingFragment StoreEntitySet="Following">
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="projectId" ColumnName="projectId" />
+          <ScalarProperty Name="organizationId" ColumnName="organizationId" />
+          <ScalarProperty Name="followingId" ColumnName="followingId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Honors">
+      <EntityTypeMapping TypeName="Ubuoy_DB_ModelModel.Honor">
+        <MappingFragment StoreEntitySet="Honors">
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="honorId" ColumnName="honorId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ImagePackages">
+      <EntityTypeMapping TypeName="Ubuoy_DB_ModelModel.ImagePackage">
+        <MappingFragment StoreEntitySet="ImagePackage">
+          <ScalarProperty Name="image10" ColumnName="image10" />
+          <ScalarProperty Name="image9" ColumnName="image9" />
+          <ScalarProperty Name="image8" ColumnName="image8" />
+          <ScalarProperty Name="image7" ColumnName="image7" />
+          <ScalarProperty Name="image6" ColumnName="image6" />
+          <ScalarProperty Name="image5" ColumnName="image5" />
+          <ScalarProperty Name="image4" ColumnName="image4" />
+          <ScalarProperty Name="image3" ColumnName="image3" />
+          <ScalarProperty Name="image2" ColumnName="image2" />
+          <ScalarProperty Name="image1" ColumnName="image1" />
+          <ScalarProperty Name="imageDefault" ColumnName="imageDefault" />
+          <ScalarProperty Name="imageId" ColumnName="imageId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Modules">
+      <EntityTypeMapping TypeName="Ubuoy_DB_ModelModel.Module">
+        <MappingFragment StoreEntitySet="Module">
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="icon" ColumnName="icon" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="moduleId" ColumnName="moduleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NewsFeeds">
+      <EntityTypeMapping TypeName="Ubuoy_DB_ModelModel.NewsFeed">
+        <MappingFragment StoreEntitySet="NewsFeed">
+          <ScalarProperty Name="followingId" ColumnName="followingId" />
+          <ScalarProperty Name="feed" ColumnName="feed" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="projectId" ColumnName="projectId" />
+          <ScalarProperty Name="organizationId" ColumnName="organizationId" />
+          <ScalarProperty Name="newsFeedId" ColumnName="newsFeedId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orginizations">
+      <EntityTypeMapping TypeName="Ubuoy_DB_ModelModel.Orginization">
+        <MappingFragment StoreEntitySet="Orginization">
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="streetAdress" ColumnName="streetAdress" />
+          <ScalarProperty Name="postalCode" ColumnName="postalCode" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="orgBgColor" ColumnName="orgBgColor" />
+          <ScalarProperty Name="orgFgColor" ColumnName="orgFgColor" />
+          <ScalarProperty Name="orgLogo" ColumnName="orgLogo" />
+          <ScalarProperty Name="imagePackageId" ColumnName="imagePackageId" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="orginizationId" ColumnName="orginizationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Projects">
+      <EntityTypeMapping TypeName="Ubuoy_DB_ModelModel.Project">
+        <MappingFragment StoreEntitySet="Project">
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="imagePackageId" ColumnName="imagePackageId" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="recived" ColumnName="recived" />
+          <ScalarProperty Name="budget" ColumnName="budget" />
+          <ScalarProperty Name="endOn" ColumnName="endOn" />
+          <ScalarProperty Name="startedOn" ColumnName="startedOn" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="organizationId" ColumnName="organizationId" />
+          <ScalarProperty Name="projectId" ColumnName="projectId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="Ubuoy_DB_ModelModel.Role">
+        <MappingFragment StoreEntitySet="Role">
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="roleId" ColumnName="roleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Skills">
+      <EntityTypeMapping TypeName="Ubuoy_DB_ModelModel.Skill">
+        <MappingFragment StoreEntitySet="Skill">
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="categoryId" ColumnName="categoryId" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="skillName" ColumnName="skillName" />
+          <ScalarProperty Name="skillId" ColumnName="skillId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tasks">
+      <EntityTypeMapping TypeName="Ubuoy_DB_ModelModel.Task">
+        <MappingFragment StoreEntitySet="Task">
+          <ScalarProperty Name="money" ColumnName="money" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="skillId" ColumnName="skillId" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="categoryId" ColumnName="categoryId" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="deadline" ColumnName="deadline" />
+          <ScalarProperty Name="endline" ColumnName="endline" />
+          <ScalarProperty Name="startedOn" ColumnName="startedOn" />
+          <ScalarProperty Name="doer" ColumnName="doer" />
+          <ScalarProperty Name="owner" ColumnName="owner" />
+          <ScalarProperty Name="taskId" ColumnName="taskId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User_With_honor">
+      <EntityTypeMapping TypeName="Ubuoy_DB_ModelModel.User_With_honor">
+        <MappingFragment StoreEntitySet="User_With_honor">
+          <ScalarProperty Name="honorId" ColumnName="honorId" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="userWithHonorId" ColumnName="userWithHonorId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserModules">
+      <EntityTypeMapping TypeName="Ubuoy_DB_ModelModel.UserModule">
+        <MappingFragment StoreEntitySet="UserModules">
+          <ScalarProperty Name="moduleBgColor" ColumnName="moduleBgColor" />
+          <ScalarProperty Name="moduleFgColor" ColumnName="moduleFgColor" />
+          <ScalarProperty Name="prority" ColumnName="prority" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="userModuleId" ColumnName="userModuleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserProjects">
+      <EntityTypeMapping TypeName="Ubuoy_DB_ModelModel.UserProject">
+        <MappingFragment StoreEntitySet="UserProjects">
+          <ScalarProperty Name="userProjectId" ColumnName="userProjectId" />
+          <ScalarProperty Name="priority" ColumnName="priority" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="projectId" ColumnName="projectId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="Ubuoy_DB_ModelModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="streetAddress" ColumnName="streetAddress" />
+          <ScalarProperty Name="postalCode" ColumnName="postalCode" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="phoneNumber" ColumnName="phoneNumber" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UsersTasks">
+      <EntityTypeMapping TypeName="Ubuoy_DB_ModelModel.UsersTask">
+        <MappingFragment StoreEntitySet="UsersTasks">
+          <ScalarProperty Name="taskId" ColumnName="taskId" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="userTaskId" ColumnName="userTaskId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

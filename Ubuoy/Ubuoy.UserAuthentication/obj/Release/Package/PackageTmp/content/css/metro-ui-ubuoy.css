@@ -1,0 +1,43 @@
+@font-face {
+	font-family: ubuoy;
+	src: url('../font/ubuoy.ttf');
+}
+
+.btn-large {
+	padding: 6px 20px;
+	height: 40px;
+	background-color: #da503a;
+}
+
+.form-wrap {
+  padding: 50px;
+  border: 2px solid lightGrey;
+  width: 400px;
+  margin-top: 10%;
+}
+
+.input-div {
+  padding: 10px;
+}
+body{
+	width:100%;
+	margin: 0pt; 
+	padding: 0pt; 
+	height: 100%; 
+	color: #777;
+	background-image:url('../../images/bg.png');
+	background-repeat:repeat;
+}
+
+.container{
+	width:100%;
+	margin: 0pt; 
+	padding: 0pt; 
+	height: 100%; 
+}
+.login-header
+{
+	font-family: ubuoy;
+	color: #1d1d1d;
+	font-size: 30px;
+}

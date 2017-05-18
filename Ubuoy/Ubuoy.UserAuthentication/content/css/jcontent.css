@@ -1,0 +1,33 @@
+div.jContent
+{
+	float: left;
+		
+}
+
+div.slides
+{
+	background-color: white;	
+}
+
+div.jContent p
+{
+	padding: 0;	
+	margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* auto and circle */
+div.jc-auto
+{
+	margin: 0; 
+}

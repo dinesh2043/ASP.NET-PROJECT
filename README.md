@@ -57,6 +57,7 @@ CREATE TABLE [dbo].[Task] (
 Figure 7 Task Table create statement
 
 This code is used to create Task table which has a relationship with the category and skill tables. This table contains 12 columns with different data types according to the data to be stored in this table. This process was repeated to create all the required ta-bles. After implementing all the tables and relationships, required database structure was achieved. It is shown in the following figure.
+
 ![img](https://github.com/dinesh2043/ASP.NET-PROJECT/blob/master/img1.JPG)   
 
 Figure 6 Database structure of Ubuoy Application
